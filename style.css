@@ -6,3 +6,5 @@ h2{
   font-size: 20px;
 }
 .display{display:flex;}
+#bigDiv div{border-bottom:2px solid red;}
+#smallDiv div{border-bottom:2px solid red;}
