@@ -35,14 +35,14 @@ if (!curl_exec($curl)) {
  	console.log(err);
  });
  function appendData(pizza){
- 	let house = document.getElementById('root');
+ 	// let house = document.getElementById('root');
  	let big = document.getElementById('bigDiv');
  	let small = document.getElementById('smallDiv');
  	let rawDate;
  	for (var i = 0; i < pizza.data.length; i++) {
  	    var div = document.createElement("div");
  	    div.innerHTML = 'Id: ' + JSON.stringify(pizza.data[i].id) + ',  SqFt: ' + JSON.stringify(pizza.data[i].area);
- 	    house.appendChild(div);
+ 	    // house.appendChild(div);
 
 
  			//separate units based on area:

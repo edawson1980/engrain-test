@@ -24,8 +24,5 @@
    </div>
  </div>
 
- <div id="root">
-
- </div>
 
  <?php include 'main.php' ?>
