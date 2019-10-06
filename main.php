@@ -48,7 +48,7 @@ if (!curl_exec($curl)) {
  			//separate units based on area:
  			if(pizza.data[i].area <= 1){
  				var div = document.createElement("div");
- 				div.innerHTML = 'Square Footage: ' + JSON.stringify(pizza.data[i].area)+ 'Unit Number: '+ JSON.stringify(pizza.data[i].unit_number)+'Last Updated: '+ JSON.stringify(pizza.data[i].updated_at);;
+ 				div.innerHTML = 'Square Footage: ' +  JSON.stringify(pizza.data[i].area)+' '+ 'Unit Number: '+ JSON.stringify(pizza.data[i].unit_number)+' '+'Last Updated: '+JSON.stringify(pizza.data[i].updated_at);;
  				smallDiv.appendChild(div);
  			}else{
  				var div = document.createElement("div");
