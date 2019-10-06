@@ -8,21 +8,19 @@
   </head>
   <body>
 
+    <?php include 'main.php' ?>
+
+    <div class="title">
+      <h2>Property Information:</h2>
+    </div>
+    <div class="display">
+      <div id="bigDiv" class="col-md-6">
+
+      </div>
+      <div id="smallDiv" class="col-md-6">
+
+      </div>
+    </div>
+
   </body>
 </html>
-
-
- <div class="title">
-   <h2>Property Information:</h2>
- </div>
- <div class="display">
-   <div id="bigDiv" class="col-md-6">
-
-   </div>
-   <div id="smallDiv" class="col-md-6">
-
-   </div>
- </div>
-
-
- <?php include 'main.php' ?>
