@@ -10,6 +10,9 @@
   </body>
 </html>
 
-<?php
-echo "hello, worllld";
- ?>
+
+ <div id="root">
+   <h2>Property Information:</h2>
+ </div>
+
+ <?php include 'main.php' ?>
