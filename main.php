@@ -48,6 +48,9 @@ curl_setopt_array($curl, array(
 ));
 
 $response = curl_exec($curl);
+
+
+
 $err = curl_error($curl);
 
 curl_close($curl);
@@ -55,12 +58,55 @@ curl_close($curl);
 if ($err) {
 	echo "cURL Error #:" . $err;
 } else {
-	echo $response;
+	// echo $response;
 }
 
 
+$information=json_decode($response,true);
+// print_r($information);
+// foreach($information['data'] as $pizza){
+//     echo $pizza['area'] . '<br>';
+//     echo "help";
+// }
+
+
+
  ?>
- <script>
+ <!DOCTYPE html>
+ <html lang="en" dir="ltr">
+   <head>
+     <meta charset="utf-8">
+     <title>Engrain Test</title>
+   </head>
+   <body>
+     <div id="smallDiv">
+       <h2>Smaller Properties:</h2>
+       <?php
+        foreach($information['data'] as $pizza){
+          if($pizza['area'] <= 1){
+            echo 'Square Footage: ' . $pizza['area'] . '<br>';
+            echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
+            echo 'Last Updated: ' . $pizza['updated_at'] . '<br>';
+          }
+        }
+        ?>
+     </div>
+     <div id="bigDiv">
+       <h2>Larger Properties:</h2>
+       <?php
+        foreach($information['data'] as $pizza){
+          if($pizza['area'] > 1){
+            echo 'Square Footage: ' . $pizza['area'] . '<br>';
+            echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
+            echo 'Last Updated: ' . $pizza['updated_at'] . '<br>';
+          }
+        }
+        ?>
+     </div>
+   </body>
+ </html>
+
+ <!-- <script>
  fetch('https://api.sightmap.com/v1/assets/1273/multifamily/units?per-page=100',{
  	"headers":{
  		'API-Key': '7d64ca3869544c469c3e7a586921ba37',
@@ -105,4 +151,4 @@ if ($err) {
 
  	}
 
- </script>
+ </script> -->
