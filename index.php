@@ -22,7 +22,7 @@
                   if($pizza['area'] > 1){
                     echo 'Square Footage: ' . $pizza['area'] . '<br>';
                     echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
-                    echo 'Last Updated: ' . $pizza['updated_at'] . '<br>'.'<br>';
+                    echo 'Last Updated: ' . date("d-m-Y", strtotime($pizza['updated_at'])) . '<br>'.'<br>';
                   }
                 }
                 ?>
@@ -36,7 +36,7 @@
            if($pizza['area'] <= 1){
              echo 'Square Footage: ' . $pizza['area'] . '<br>';
              echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
-             echo 'Last Updated: ' . $pizza['updated_at'] . '<br>'. '<br>';
+             echo 'Last Updated: ' . date("d-m-Y", strtotime($pizza['updated_at'])) . '<br>'. '<br>';
            }
          }
          ?>
