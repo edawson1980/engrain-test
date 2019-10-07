@@ -34,49 +34,7 @@ $information=json_decode($response,true);
 
  ?>
 
- <!DOCTYPE html>
- <html lang="en" dir="ltr">
-   <head>
-     <meta charset="utf-8">
-     <title>Engrain Test</title>
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-     <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-     <!-- <div class="display">
-       <div class="title">
-         <h2>Property Info:</h2>
-       </div>
-       <div id="bigDiv" class="col-md-6">
-         <h2>Larger Properties:</h2>
-         <?php
-          foreach($information['data'] as $pizza){
-            if($pizza['area'] > 1){
-              echo 'Square Footage: ' . $pizza['area'] . '<br>';
-              echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
-              echo 'Last Updated: ' . $pizza['updated_at'] . '<br>';
-            }
-          }
-          ?>
-       </div>
-
-       <div id="smallDiv" class="col-md-6">
-         <h2>Smaller Properties:</h2>
-         <?php
-          foreach($information['data'] as $pizza){
-            if($pizza['area'] <= 1){
-              echo 'Square Footage: ' . $pizza['area'] . '<br>';
-              echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
-              echo 'Last Updated: ' . $pizza['updated_at'] . '<br>';
-            }
-          }
-          ?>
-       </div> -->
-     </div>
-
-   </body>
- </html>
-
+ 
  <!-- <script>
  fetch('https://api.sightmap.com/v1/assets/1273/multifamily/units?per-page=100',{
  	"headers":{
