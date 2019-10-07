@@ -1,36 +1,4 @@
 <?php
-echo "hello, worllld";
-
-// $headers = array();
-// $headers[] = 'API-Key: 7d64ca3869544c469c3e7a586921ba37';
-
-// $curl = curl_init('https://api.sightmap.com/v1/assets/1273/multifamily/units?per-page=100');
-// // curl_setopt($curl, CURLOPT_URL, $url);
-// curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-//      'APIKEY: 7d64ca3869544c469c3e7a586921ba37',
-//      'Content-Type: application/json',
-//   ));
-//   curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-//   curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-
-// $resp = curl_exec($curl);
-// $response = array();
-// $response = json_decode($resp);
-// echo print_r($response);
-// echo '<h2>' .'Property info: '. $response . '</h2>';
-
-
-
-
-
-
-//catch errors
-// if (!curl_exec($curl)) {
-//     die('Error: "' . curl_error($curl) . '" - Code: ' . curl_errno($curl));
-// }
-
-
-
 
 $curl = curl_init();
 
@@ -61,17 +29,11 @@ if ($err) {
 	// echo $response;
 }
 
-
+//adding true makes the json become an associative array (meaning we can use brackets)
 $information=json_decode($response,true);
-// print_r($information);
-// foreach($information['data'] as $pizza){
-//     echo $pizza['area'] . '<br>';
-//     echo "help";
-// }
-
-
 
  ?>
+
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
    <head>
@@ -79,30 +41,35 @@ $information=json_decode($response,true);
      <title>Engrain Test</title>
    </head>
    <body>
-     <div id="smallDiv">
-       <h2>Smaller Properties:</h2>
-       <?php
-        foreach($information['data'] as $pizza){
-          if($pizza['area'] <= 1){
-            echo 'Square Footage: ' . $pizza['area'] . '<br>';
-            echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
-            echo 'Last Updated: ' . $pizza['updated_at'] . '<br>';
+     <div class="display">
+
+       <div id="bigDiv" class="col-md-6">
+         <h2>Larger Properties:</h2>
+         <?php
+          foreach($information['data'] as $pizza){
+            if($pizza['area'] > 1){
+              echo 'Square Footage: ' . $pizza['area'] . '<br>';
+              echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
+              echo 'Last Updated: ' . $pizza['updated_at'] . '<br>';
+            }
           }
-        }
-        ?>
-     </div>
-     <div id="bigDiv">
-       <h2>Larger Properties:</h2>
-       <?php
-        foreach($information['data'] as $pizza){
-          if($pizza['area'] > 1){
-            echo 'Square Footage: ' . $pizza['area'] . '<br>';
-            echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
-            echo 'Last Updated: ' . $pizza['updated_at'] . '<br>';
+          ?>
+       </div>
+
+       <div id="smallDiv" class="col-md-6">
+         <h2>Smaller Properties:</h2>
+         <?php
+          foreach($information['data'] as $pizza){
+            if($pizza['area'] <= 1){
+              echo 'Square Footage: ' . $pizza['area'] . '<br>';
+              echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
+              echo 'Last Updated: ' . $pizza['updated_at'] . '<br>';
+            }
           }
-        }
-        ?>
+          ?>
+       </div>
      </div>
+
    </body>
  </html>
 
