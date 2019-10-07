@@ -20,8 +20,8 @@
                <?php
                 foreach($information['data'] as $pizza){
                   if($pizza['area'] > 1){
-                    echo 'Square Footage: ' . $pizza['area'] . '<br>';
                     echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
+                    echo 'Square Footage: ' . $pizza['area'] . '<br>';
                     echo 'Last Updated: ' . date("d-m-Y", strtotime($pizza['updated_at'])) . '<br>'.'<br>';
                   }
                 }
@@ -34,8 +34,8 @@
         <?php
          foreach($information['data'] as $pizza){
            if($pizza['area'] <= 1){
-             echo 'Square Footage: ' . $pizza['area'] . '<br>';
              echo 'Unit Number: ' . $pizza['unit_number'] . '<br>';
+             echo 'Square Footage: ' . $pizza['area'] . '<br>';
              echo 'Last Updated: ' . date("d-m-Y", strtotime($pizza['updated_at'])) . '<br>'. '<br>';
            }
          }

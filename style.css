@@ -10,9 +10,9 @@ h1{
 h2{
   color: red;
   font-size: 20px;
+  text-transform: uppercase;
 }
 div.display{
   display:flex;
-  padding:25px 50px 25px 180px;
+  padding:45px 50px 25px 180px;
 }
-#bigDiv < div{border-bottom:2px solid red;}
