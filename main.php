@@ -39,10 +39,14 @@ $information=json_decode($response,true);
    <head>
      <meta charset="utf-8">
      <title>Engrain Test</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="style.css">
    </head>
    <body>
-     <div class="display">
-
+     <!-- <div class="display">
+       <div class="title">
+         <h2>Property Info:</h2>
+       </div>
        <div id="bigDiv" class="col-md-6">
          <h2>Larger Properties:</h2>
          <?php
@@ -67,7 +71,7 @@ $information=json_decode($response,true);
             }
           }
           ?>
-       </div>
+       </div> -->
      </div>
 
    </body>

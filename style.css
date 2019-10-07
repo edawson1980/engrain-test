@@ -1,10 +1,14 @@
 body{width:100%;overflow-x:hidden;}
 
+div.title{padding-top:50px;}
+
 h2{
   text-align:center;
   color: red;
   font-size: 20px;
 }
-.display{display:flex;}
-#bigDiv div{border-bottom:2px solid red;}
-#smallDiv div{border-bottom:2px solid red;}
+div.display{
+  display:flex;
+  padding:25px 100px;
+}
+#bigDiv < div{border-bottom:2px solid red;}
