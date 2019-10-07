@@ -2,13 +2,17 @@ body{width:100%;overflow-x:hidden;}
 
 div.title{padding-top:50px;}
 
-h2{
+h1{
   text-align:center;
+  text-decoration:underline;
+}
+
+h2{
   color: red;
   font-size: 20px;
 }
 div.display{
   display:flex;
-  padding:25px 100px;
+  padding:25px 50px 25px 180px;
 }
 #bigDiv < div{border-bottom:2px solid red;}

@@ -10,7 +10,7 @@
 
     <?php include 'main.php' ?>
     <div class="title">
-      <h2>Property Info:</h2>
+      <h1>Property Info:</h1>
     </div>
     <div class="display">
 
